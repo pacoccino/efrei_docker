@@ -1,2 +1,4 @@
-docker build -t exo_node .
-docker run -p 3000:3000 --name exo_node exo_node
+docker-compose up -d --build --scale backend=3
+
+# pour dev
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d mongodb
